@@ -1,0 +1,251 @@
+/* .dashboard{
+  background-color: #15191d;
+  color: #ff1354;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+} */
+
+/* .user{
+  color: #ff1354;
+  padding: 1rem;
+}
+.sidebyside{
+  display: flex;
+}
+.icon{
+  box-shadow: black;
+}
+.badges{
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* body{
+  background-color: white;
+  color: #ff1354;
+}
+
+.vessel{
+  display: flex;
+  justify-content: space-between;
+  color: #ff1354;
+} */
+
+.dashboard {
+  background-color: #15191d;
+  color: #ff1354;
+}
+
+/* body {
+  background-color: rgb(222, 255, 222);
+} */
+
+.vessel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 225px;
+  height: 640px;
+  background-color: black;
+  padding-left: 5px;
+  flex-shrink: 0;
+}
+
+.user-icon {
+  padding-left: 35px;
+  background-color: black;
+}
+
+.bt-left {
+  padding-top: 400px;
+  background-color: black;
+}
+
+.top-mid {
+  margin-top: 10px;
+  margin-left: -350px;
+  width: 550px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #000;
+}
+
+.bottom-mid {
+  margin-top: 40px;
+  margin-left: -150px;
+  width: 150px;
+  height: 50px;
+  border-radius: 9px;
+  background: #000;
+}
+
+.end-top {
+  margin-left: -370px;
+  width: 320px;
+  height: 200px;
+  border-radius: 9px;
+  background: #000;
+}
+
+.end-mid {
+  margin-left: -370px;
+  width: 320px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 9px;
+  background: #000;
+}
+
+.end-bottom {
+  margin-left: -370px;
+  width: 320px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 9px;
+  background: #000;
+  white-space: nowrap; /* Prevent ticker content from wrapping */
+  overflow: hidden; /* Hide overflow content */
+  position: relative;
+}
+
+.name {
+  /* font-size: 18px; */
+  font-weight: 120;
+  padding-left: 20px;
+  background: #000;
+  margin-top: 10px;
+}
+
+.content-t-m {
+  color: white;
+  background-color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 50;
+  margin-bottom: 0.5rem;
+  color: white;
+  background-color: #000;
+}
+.card-text {
+  margin-bottom: 1rem;
+  font-size: 10px;
+  color: white;
+  background-color: #000;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.my-button {
+  font-size: 10px;
+  color: #93b2fb;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #93b2fb;
+  color: white;
+}
+
+.ticker {
+  position: absolute; /* Position absolute for vertical movement */
+  animation: ticker-animation 10s linear infinite; /* Adjust animation duration as needed */
+  background-color: #000;
+  color: white;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateY(100%); /* Start off-screen at the bottom */
+  }
+  100% {
+    transform: translateY(-100%); /* Move the content upward */
+  }
+}
+.ticker p {
+  margin: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; /* Add a border for separation */
+  width: 320px;
+  background-color: #000;
+  color: white;
+}
+
+.cont {
+  border: 1px solid white; /* Border style, width, and color */
+  padding: 5px; /* Add padding to create space inside the border */
+  width: 200px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #000;
+  color: white;
+}
+.tripbutton {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #93b2fb;
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+
+.tripbutton span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #2954b7;
+  border: 0.08em solid #93b2fb;
+  box-shadow: 0 0.4em 0.1em 0.019em #93b2fb;
+}
+
+.tripbutton span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+  cursor: pointer;
+}
+
+.tripbutton span:not(hover) {
+  transition: all 1s;
+}
+
+.icon {
+  width: 20px;
+  padding: 1px;
+  margin-top: 10px;
+  height: 17px;
+}
+.icons {
+  width: 30px;
+  padding: 1px;
+  margin-top: 5px;
+  height: 25px;
+  background-color: #000;
+}
+.bb {
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./login.css";
 
@@ -40,7 +41,9 @@ const Login = () => {
             <h1>Sign In</h1>
             <input type="email" placeholder="Enter email" />
             <input type="password" placeholder="Enter password" />
-            <button>Sign In!</button>
+            <Link to="/user/Muskan">
+              <button>Sign In!</button>
+            </Link>
             <span>
               Forgot your password?<a href="#">Click here</a>
             </span>
