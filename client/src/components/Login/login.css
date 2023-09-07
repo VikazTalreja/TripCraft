@@ -4,7 +4,6 @@
 header {
   font-family: "Lobster", cursive;
 }
-
 .login-div {
   display: flex;
   align-items: center;
@@ -61,7 +60,7 @@ input {
   min-height: 480px;
   overflow: hidden;
   border-radius: 25px;
-  border: solid 2px #fff;
+  border: solid 2px #000;
   padding: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0, 25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -73,6 +72,8 @@ input {
   left: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+  background-color: rgb(38, 178, 234);
+  color: white;
 }
 
 .sign-up-div {
@@ -120,7 +121,17 @@ button:active {
 #signIn,
 #signUp {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+#signIn:hover {
+  background-color: skyblue;
+  transition: all 0.8s ease-in-out;
+}
+#signUp:hover {
+  background-color: skyblue;
+  transition: all 0.8s ease-in-out;
 }
 
 .container.right-panel-active .sign-in-div {
@@ -194,4 +205,9 @@ button:active {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
