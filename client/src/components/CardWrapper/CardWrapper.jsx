@@ -5,25 +5,25 @@ import Tilt from "react-parallax-tilt";
 import data from "../../data/data.json";
 
 const CardWrapper = () => {
-  useEffect(() => {
-    const scrollToTopButton = document.querySelector(".scroll-icon");
-    const scrollableDiv = document.querySelector(".ItineraryLists"); // Replace with the appropriate class or ID of your div
+  // useEffect(() => {
+  //   const scrollToTopButton = document.querySelector(".scroll-icon");
+  //   const scrollableDiv = document.querySelector(".ItineraryLists"); // Replace with the appropriate class or ID of your div
 
-    scrollToTopButton.addEventListener("click", () => {
-      console.log("Hello");
-      scrollableDiv.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-  }, []);
+  //   scrollToTopButton.addEventListener("click", () => {
+  //     console.log("Hello");
+  //     scrollableDiv.scrollTo({
+  //       top: 0,
+  //       behavior: "smooth",
+  //     });
+  //   });
+  // }, []);
   return (
     <div className="CardWrapper">
       <div className="wrapper">
         <div className="center-line">
-          <button className="scroll-icon">
+          {/* <button className="scroll-icon">
             <i className="start fas fa-caret-up"></i>
-          </button>
+          </button> */}
         </div>
         {data.days.map((item, index) => (
           <Card position={index + 1} detail={item} key={index} />

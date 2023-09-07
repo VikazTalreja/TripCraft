@@ -1,39 +1,8 @@
-/* .dashboard{
-  background-color: #15191d;
-  color: #ff1354;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-} */
-
-/* .user{
-  color: #ff1354;
-  padding: 1rem;
-}
-.sidebyside{
-  display: flex;
-}
-.icon{
-  box-shadow: black;
-}
-.badges{
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* body{
-  background-color: white;
-  color: #ff1354;
-}
-
-.vessel{
-  display: flex;
-  justify-content: space-between;
-  color: #ff1354;
-} */
-
 .dash-container {
   font-family: "Poppins", sans-serif;
+  background-color: #15191d;
+  height: 100vh;
+  color: #93b2fb;
 }
 
 .dashboard {
@@ -67,7 +36,7 @@
 .top-mid {
   margin-top: 10px;
   margin-left: -350px;
-  width: 550px;
+  width: 750px;
   height: 350px;
   flex-shrink: 0;
   border-radius: 9px;
@@ -79,7 +48,7 @@
   width: 150px;
   height: 50px;
   border-radius: 9px;
-  background: #000;
+  /* background: #000; */
 }
 
 .end-top {
@@ -111,6 +80,19 @@
   position: relative;
 }
 
+.card {
+  width: 100%;
+  height: 80%;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+}
 .name {
   /* font-size: 18px; */
   z-index: 1;
@@ -134,28 +116,16 @@
   border-radius: 5px;
   padding: 20px;
   margin: 10px;
+  /* max-height: 100px;
+  max-width: 100px; */
 }
+
 .content-t-m:hover {
   border-radius: 15px;
   cursor: pointer;
   max-height: 350px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
 }
-
-.card {
-  width: 100%;
-  height: 80%;
-  transition: all 0.4s;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000;
-}
-
 .first-content {
   height: 100%;
   width: 100%;
@@ -194,7 +164,7 @@
   transform: rotate(0deg);
 }
 
-.Third-content {
+.third-content {
   height: 0%;
   width: 100%;
   opacity: 0;
@@ -206,7 +176,7 @@
   font-size: 0px;
   transform: rotate(90deg) scale(-1);
 }
-.content-t-m:hover .Third-content {
+.content-t-m:hover .third-content {
   opacity: 1;
   height: 40px;
   width: 100px;

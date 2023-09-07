@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 const Middle = () => {
@@ -11,43 +13,33 @@ const Middle = () => {
             <div className="card-body">
               <span className="first-content">26 August</span>
               <p className="second-content">
-                <br />
-                Location: Lonavala <br />
-                Duration: 2 Days
-              </p>{" "}
-              <br />
+                Location: Mumbai <br></br> Duration: 6 Days
+              </p>
             </div>
-            <button className="Third-content">Repeat Trip</button>
-            <br />
-            <button className="Third-content">Details</button>
+            <button className="third-content">Repeat Trip</button>
+            <Link to="/user/Muskan/trips/1">
+              <button className="third-content">Details</button>
+            </Link>
           </div>
           <div className="content-t-m">
             <div className="card-body">
               <span className="first-content">2 October</span>
               <p className="second-content">
-                <br />
-                Location: Nashik <br />
-                Duration: 2 Days
-              </p>{" "}
-              <br />
+                Location: Nashik <br></br> Duration: 2 Days
+              </p>
             </div>
-            <button className="Third-content">Repeat Trip</button>
-            <br />
-            <button className="Third-content">Details</button>
+            <button className="third-content">Repeat Trip</button>
+            <button className="third-content">Details</button>
           </div>
           <div className="content-t-m">
             <div className="card-body">
               <span className="first-content">17 August</span>
               <p className="second-content">
-                <br />
-                Location: Karjat <br />
-                Duration: 2 Days
+                Location: Karjat <br></br> Duration: 2 Days
               </p>
-              <br />
             </div>
-            <button className="Third-content">Repeat Trip</button>
-            <br />
-            <button className="Third-content">Details</button>
+            <button className="third-content">Repeat Trip</button>
+            <button className="third-content">Details</button>
           </div>
         </div>
       </div>
