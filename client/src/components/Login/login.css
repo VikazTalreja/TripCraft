@@ -4,6 +4,12 @@
 header {
   font-family: "Lobster", cursive;
 }
+.log-container {
+  background-color: #15191d;
+  height: 100vh;
+  color: smokewhite;
+}
+
 .login-div {
   display: flex;
   align-items: center;
