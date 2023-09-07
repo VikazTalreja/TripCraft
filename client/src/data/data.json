@@ -1,0 +1,58 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "date": "2023-08-24",
+      "activities": [
+        ["Arrival and Check-in", [19.076, 72.8777]],
+        ["Gateway of India", [18.9223, 72.8342]],
+        ["Elephanta Caves", [18.9625, 72.9318]]
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2023-08-25",
+      "activities": [
+        ["Chhatrapati Shivaji Maharaj Terminus", [18.9402, 72.8352]],
+        ["Colaba Causeway", [18.9166, 72.826]],
+        ["Marine Drive", [18.9453, 72.8232]]
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2023-08-26",
+      "activities": [
+        ["Siddhivinayak Temple", [19.0277, 72.8334]],
+        ["Dadar Flower Market", [19.0196, 72.8439]],
+        ["Bandra-Worli Sea Link", [19.0302, 72.8186]]
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2023-08-27",
+      "activities": [
+        ["Haji Ali Dargah", [18.9824, 72.8102]],
+        ["Mahalaxmi Dhobi Ghat", [18.982, 72.8245]],
+        ["Nehru Science Centre", [18.9903, 72.8159]]
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2023-08-28",
+      "activities": [
+        ["Sanjay Gandhi National Park", [19.2183, 72.9074]],
+        ["Kanheri Caves", [19.2167, 72.9111]],
+        ["Powai Lake", [19.119, 72.9071]]
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2023-08-29",
+      "activities": [
+        ["Juhu Beach", [19.1005, 72.8271]],
+        ["Film City", [19.1556, 72.9258]],
+        ["Departure", [19.0896, 72.8656]]
+      ]
+    }
+  ]
+}

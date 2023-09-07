@@ -47,7 +47,7 @@ const End = () => {
         <div className="cont">Villa Le Reve</div>
       </div>
       <div className="end-bottom">
-        <h3 className="name">
+        <h3 className="name" id="Name">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -6,7 +6,7 @@ import End from "./End";
 
 const Dashboard = () => {
   return (
-    <body className="container">
+    <body className="dash-container">
       <span className="vessel">
         <div className="left">
           <Left />

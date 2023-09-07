@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Itinerary from "./components/Itinerary/Itinerary";
 
 import "./index.css";
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/user/Muskan",
     element: <Dashboard />,
+  },
+  {
+    path: "/user/Muskan/trips/1",
+    element: <Itinerary />,
   },
 ]);
 

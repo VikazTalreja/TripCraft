@@ -1,0 +1,19 @@
+.Itinerary {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 790px) {
+  .Itinerary {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .Itinerary {
+    grid-template-columns: 1fr;
+  }
+}

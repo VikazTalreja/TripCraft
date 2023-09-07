@@ -32,14 +32,14 @@
   color: #ff1354;
 } */
 
+.dash-container {
+  font-family: "Poppins", sans-serif;
+}
+
 .dashboard {
   background-color: #15191d;
   color: #ff1354;
 }
-
-/* body {
-  background-color: rgb(222, 255, 222);
-} */
 
 .vessel {
   display: flex;
@@ -71,7 +71,6 @@
   height: 350px;
   flex-shrink: 0;
   border-radius: 9px;
-  background: #000;
 }
 
 .bottom-mid {
@@ -114,52 +113,105 @@
 
 .name {
   /* font-size: 18px; */
+  z-index: 1;
+  position: relative;
   font-weight: 120;
   padding-left: 20px;
   background: #000;
   margin-top: 10px;
 }
 
+#Name {
+  margin-top: -10px;
+  padding-top: 15px;
+  height: 60px;
+}
+
 .content-t-m {
   color: white;
-  background-color: #000;
+  background-color: #15191d;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   margin: 10px;
 }
-.card-title {
-  font-size: 1rem;
-  font-weight: 50;
-  margin-bottom: 0.5rem;
-  color: white;
-  background-color: #000;
+.content-t-m:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  max-height: 350px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
 }
-.card-text {
-  margin-bottom: 1rem;
-  font-size: 10px;
-  color: white;
-  background-color: #000;
-}
+
 .card {
+  width: 100%;
+  height: 80%;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 500;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #000;
 }
-.my-button {
-  font-size: 10px;
-  color: #93b2fb;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  cursor: pointer;
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: space-around;
+  opacity: 1;
+  border-radius: 15px;
+  border-color: white;
+  font-size: 15px;
 }
 
-.my-button:hover {
-  background-color: #93b2fb;
-  color: white;
+.content-t-m:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+  border-color: white;
+}
+
+.content-t-m:hover .second-content {
+  opacity: 1;
+  height: 80%;
+  font-size: 0.8rem;
+  transform: rotate(0deg);
+}
+
+.Third-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+.content-t-m:hover .Third-content {
+  opacity: 1;
+  height: 40px;
+  width: 100px;
+  font-size: 0.7rem;
+  transform: rotate(0deg);
 }
 
 .ticker {
