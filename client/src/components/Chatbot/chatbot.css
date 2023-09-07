@@ -104,3 +104,40 @@ body {
   height: 25px;
   filter: invert(1);
 }
+
+.message-area {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sent {
+  height: fit-content;
+  width: auto;
+  padding: 10px;
+  background-color: #63cd8f;
+  margin-top: 10px;
+  border-radius: 15px;
+  margin-left: 400px;
+}
+
+.sent-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.recieved {
+  width: fit-content;
+  height: fit-content;
+  max-width: 50%;
+  padding: 10px;
+  background-color: #639acd;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  word-break: break-word;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  /* overflow: hidden; */
+}

@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import icon from "../../assets/icon.png";
 
 import "./chatbot.css";
+import handleCLick from "./script";
 
 const Chatbot = () => {
   useEffect(() => {
@@ -31,10 +32,16 @@ const Chatbot = () => {
             </h4>
             <i class="fa-solid fa-chevron-down" id="bt-down"></i>
           </div>
-          <div className="message-area"></div>
+          <div className="message-area" id="m-area"></div>
           <div className="message-input">
-            <input placeholder="Enter your message"></input>
-            <button className="send-button">Send</button>
+            <input
+              type="text"
+              id="prompt-input"
+              placeholder="Enter your message"
+            ></input>
+            <button onClick={handleCLick} className="send-button">
+              Send
+            </button>
           </div>
         </div>
       </div>
