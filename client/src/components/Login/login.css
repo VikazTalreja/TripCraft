@@ -5,12 +5,6 @@ header {
   font-family: "Lobster", cursive;
 }
 
-.log-container {
-  background-color: #15191d;
-  height: 100vh;
-  color: white;
-}
-
 .login-div {
   display: flex;
   align-items: center;
@@ -19,6 +13,7 @@ header {
   min-height: 100%;
   margin: 10%;
   font-family: "Poppins", sans-serif;
+  color: white;
 }
 
 .tagline {
@@ -69,7 +64,7 @@ input {
   border-radius: 25px;
   border: solid 2px #fff;
   padding: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0, 25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0, 25), 0 10px 10px rgba(0, 0, 0, 0.22); */
 }
 
 .sign-in-div,
@@ -105,7 +100,7 @@ p {
   margin: 15px 0 20px;
 }
 
-button {
+.sign-button {
   font-size: 12px;
   font-weight: bold;
   padding: 12px 55px;
@@ -119,7 +114,7 @@ button {
   cursor: pointer;
 }
 
-button:active {
+.sign-button:active {
   transform: scale(0.9);
 }
 
@@ -127,6 +122,7 @@ button:active {
 #signUp {
   background-color: transparent;
   border: 2px solid #fff;
+  color: whitesmoke;
 }
 
 .container.right-panel-active .sign-in-div {

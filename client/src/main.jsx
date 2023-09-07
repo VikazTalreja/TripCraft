@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Itinerary from "./components/Itinerary/Itinerary";
 
 import "./index.css";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +27,15 @@ const router = createBrowserRouter([
     path: "/user/Muskan/trips/1",
     element: <Itinerary />,
   },
+  {
+    path: "/chatbot",
+    element: <Chatbot />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Chatbot />
   </React.StrictMode>
 );
