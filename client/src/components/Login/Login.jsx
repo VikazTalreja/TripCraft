@@ -34,7 +34,7 @@ const Login = () => {
               <input type="text" placeholder="Enter your name" />
               <input type="email" placeholder="Enter email" />
               <input type="password" placeholder="Enter password" />
-              <button>Sign Up!</button>
+              <button className="sign-button">Sign Up!</button>
             </form>
           </div>
           <div className="sign-in-div">
@@ -43,7 +43,7 @@ const Login = () => {
               <input type="email" placeholder="Enter email" />
               <input type="password" placeholder="Enter password" />
               <Link to="/user/Muskan">
-                <button>Sign In!</button>
+                <button className="sign-button">Sign In!</button>
               </Link>
               <span>
                 Forgot your password?<a href="#">Click here</a>
@@ -55,12 +55,16 @@ const Login = () => {
               <div className="overlay-left">
                 <h1>Old wanderer huh!</h1>
                 <span>Continue your travel story - sign in now</span>
-                <button id="signIn">Sign In</button>
+                <button className="sign-button" id="signIn">
+                  Sign In
+                </button>
               </div>
               <div className="overlay-right">
                 <h1>New explorer in town..</h1>
                 <span>Sign Up and Discover</span>
-                <button id="signUp">Sign Up</button>
+                <button className="sign-button" id="signUp">
+                  Sign Up
+                </button>
               </div>
             </div>
           </div>
