@@ -11,6 +11,7 @@
 }
 
 .vessel {
+  height: 100vh;
   display: flex;
   justify-content: space-between;
 }
@@ -29,7 +30,7 @@
 }
 
 .bt-left {
-  padding-top: 400px;
+  padding-top: 550px;
   background-color: black;
 }
 
