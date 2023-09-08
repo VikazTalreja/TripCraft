@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import icon from "../../assets/icon.png";
 
@@ -20,14 +20,6 @@ const Chatbot = () => {
       chatBot.classList.add("display-none");
       botButton.classList.remove("display-none");
     });
-
-    // const inputArea = document.getElementById("prompt-input");
-    // inputArea.addEventListener("keypress",  (e) => {
-    //   console.log(e.code);
-    //   if (e.code === "Enter") {
-    //     async handleCLick();
-    //   }
-    // });
   });
   return (
     <div className="cbot">
@@ -42,17 +34,14 @@ const Chatbot = () => {
           </div>
           <div className="message-area" id="m-area"></div>
           <div className="message-input">
-            <form id="form-control" onSubmit={handleCLick}>
-              <input
-                type="text"
-                id="prompt-input"
-                placeholder="Enter your message"
-                autoComplete="off"
-              ></input>
-              <button onClick={handleCLick} className="send-button">
-                Send
-              </button>
-            </form>
+            <input
+              type="text"
+              id="prompt-input"
+              placeholder="Enter your message"
+            ></input>
+            <button onClick={handleCLick} className="send-button">
+              Send
+            </button>
           </div>
         </div>
       </div>
