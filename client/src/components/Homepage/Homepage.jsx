@@ -13,12 +13,12 @@ function Homepage() {
         <h1>TripCraft</h1>
       </div>
       <div class="line-1">
-        Embark Your<br></br>Journey With us
+        Ai Powered <br></br>Travel Planner
       </div>
       <div className="Button">
         <Link to="/login">
           <button class="animated-button">
-            <span>Join us</span>
+            <span>Start Planning</span>
             <span></span>
           </button>
         </Link>
