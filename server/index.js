@@ -2,9 +2,8 @@ const { OpenAI } = require("openai");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const PORT = 8000;
 
-require("dotenv").config();
+const PORT = 8000;
 
 const app = express();
 
@@ -29,7 +28,7 @@ app.post("/chatbot", async (req, res) => {
   console.log(message);
 
   const openai = new OpenAI({
-    apiKey: `${process.env.API_KEY}`,
+    apiKey: "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",
   });
 
   const response = await openai.completions.create({
