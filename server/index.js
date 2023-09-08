@@ -30,12 +30,12 @@ app.post("/chatbot", async (req, res) => {
   console.log(message);
 
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: process.env.API_KEY,
   });
 
   const response = await openai.completions.create({
     model: "text-davinci-003",
-    prompt: message,
+    prompt: req.body.message,
     max_tokens: 2048,
     temperature: 1,
   });
