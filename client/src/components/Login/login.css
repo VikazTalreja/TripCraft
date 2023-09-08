@@ -36,7 +36,7 @@ header {
   font-size: 20px;
 }
 
-form {
+#login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@ form {
   text-align: center;
 }
 
-input {
+#login-form input {
   outline: none;
   border: none;
   background: rgba(0, 0, 0, 0.3);

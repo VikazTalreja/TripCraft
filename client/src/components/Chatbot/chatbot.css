@@ -55,6 +55,12 @@ body {
   overflow-y: scroll;
 }
 
+#form-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .message-input {
   position: absolute;
   bottom: 0;
@@ -113,12 +119,14 @@ body {
 
 .sent {
   height: fit-content;
-  width: auto;
+  width: max-content;
   padding: 10px;
   background-color: #63cd8f;
   margin-top: 10px;
   border-radius: 15px;
-  margin-left: 400px;
+  margin-left: 10px;
+  max-width: 250px;
+  float: right;
 }
 
 .sent-wrapper {
