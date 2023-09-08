@@ -41,7 +41,7 @@ const handleCLick = async (e) => {
     const response = await axios.post("http://localhost:8000/chatbot", {
       message: _prompt.value,
     });
-    console.log(response);
+    // console.log(response);
     recieve.innerHTML = response.data;
   } catch (error) {
     console.log(error);
