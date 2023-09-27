@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.main-container {
+  background: linear-gradient(117deg, #0c1d39 14.64%, #1d0c32 89.29%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #93b2fb;
+  overflow: hidden;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60vw;
+  margin-top: -70px;
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  left: 0;
+}
+
+.user p {
+  font-weight: 500;
+}
+
+.plan-btn {
+  outline: none;
+  border: none;
+  background-color: rgba(176, 196, 222, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.plan-button button {
+  cursor: pointer;
+}
+
+.archive-div {
+  height: 70vh;
+  text-align: center;
+}
+
+.archive-container {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    rgba(176, 196, 222, 0.2);
+
+  height: 100%;
+  border-radius: 25px;
+}
+
+.heading {
+  font-size: 12px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.trip-card-container {
+  display: flex;
+  overflow: scroll;
+}
+
+.trip-card {
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(
+    180deg,
+    rgba(205, 184, 184, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin: 0 20px;
+  border-radius: 30px;
+  border-bottom: 3px solid rgba(232, 226, 226, 0.7);
+  border-left: 3px solid rgba(232, 226, 226, 0.7);
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.right-col {
+  width: 35vw;
+  height: 100%;
+  padding: 50px;
+}
+
+.right-container {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    rgba(176, 196, 222, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.notifications,
+.upcoming {
+  width: 300px;
+  height: 430px;
+  border-radius: 30px;
+  background: rgba(189, 186, 203, 0.26);
+  backdrop-filter: blur(3.5px);
+  margin: 35px 0;
+  text-align: center;
+}
+
+.upcoming {
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.line {
+  width: 100%;
+  background-color: white;
+  height: 1.5px;
+  margin-top: 10px;
+}
+
+.notifications p {
+  font-weight: 400;
+}
+
+.right-heading {
+  text-align: center;
+  z-index: 1;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ticker-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.ticker {
+  position: absolute;
+  text-align: center;
+  animation: ticker-animation 5s linear infinite;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ticker p {
+  font-weight: 400;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.trip-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city p {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  /* margin-top: 10px; */
+}
+
+.trip-card .line {
+  margin-top: 0px !important;
+}
+
+.trip-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.details-btn {
+  outline: none;
+  border: none;
+  background: rgba(189, 186, 203, 0.26);
+  color: white;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.trip-details span {
+  font-weight: 700;
+}
+
+.duration,
+.start-date {
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

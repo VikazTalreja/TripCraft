@@ -1,18 +1,14 @@
 import React from "react";
 import "./style.css";
-import Left from "./Left";
-import Middle from "./Middle";
+import Mainmiddle from "./Mainmiddle";
 import End from "./End";
 
 const Dashboard = () => {
   return (
     <body className="dash-container">
       <span className="vessel">
-        <div className="left">
-          <Left />
-        </div>
         <div className="middle">
-          <Middle />
+          <Mainmiddle />
         </div>
         <div className="end">
           <End />

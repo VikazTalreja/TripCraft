@@ -56,22 +56,22 @@
   z-index: -1;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
+// ::-webkit-scrollbar {
+//   width: px;
+// }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #ff1354;
-}
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 10px;
+//   background: #ff1354;
+// }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #ff1354;
-}
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #ff1354;
+// }
 
 @media (max-width: 790px) {
   .ItineraryLists {

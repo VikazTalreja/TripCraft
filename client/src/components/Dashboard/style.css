@@ -1,278 +1,190 @@
-.dash-container {
-  font-family: "Poppins", sans-serif;
-  background-color: #15191d;
-  height: 100vh;
-  color: #93b2fb;
-}
-
-.end {
-  z-index: 0;
-}
-
-.dashboard {
-  background-color: #15191d;
-  color: #ff1354;
-}
-
-.vessel {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left {
-  width: 225px;
-  height: 640px;
-  background-color: black;
-  padding-left: 5px;
-  flex-shrink: 0;
-}
-
-.user-icon {
-  padding-left: 35px;
-  background-color: black;
-}
-
-.bt-left {
-  padding-top: 550px;
-  background-color: black;
-}
-
-.top-mid {
-  margin-top: 10px;
-  margin-left: -350px;
-  width: 750px;
-  height: 350px;
-  flex-shrink: 0;
-  border-radius: 9px;
-}
-
-.bottom-mid {
-  margin-top: 40px;
-  margin-left: -150px;
-  width: 150px;
-  height: 50px;
-  border-radius: 9px;
-  /* background: #000; */
-}
-
-.end-top {
-  margin-left: -370px;
-  width: 320px;
-  height: 200px;
-  border-radius: 9px;
-  background: #000;
-}
-
-.end-mid {
-  margin-left: -370px;
-  width: 320px;
-  height: 200px;
-  margin-top: 20px;
-  border-radius: 9px;
-  background: #000;
-}
-
-.end-bottom {
-  margin-left: -370px;
-  width: 320px;
-  height: 200px;
-  margin-top: 20px;
-  border-radius: 9px;
-  background: #000;
-  white-space: nowrap; /* Prevent ticker content from wrapping */
-  overflow: hidden; /* Hide overflow content */
-  position: relative;
-}
-
-.card {
-  width: 100%;
-  height: 80%;
-  transition: all 0.4s;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000;
-}
-.name {
-  /* font-size: 18px; */
-  z-index: 1;
-  position: relative;
-  font-weight: 120;
-  padding-left: 20px;
-  background: #000;
-  margin-top: 10px;
-}
-
-#Name {
-  margin-top: -10px;
-  padding-top: 15px;
-  height: 60px;
-}
-
-.content-t-m {
-  color: white;
-  background-color: #15191d;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  /* max-height: 100px;
-  max-width: 100px; */
-}
-
-.content-t-m:hover {
-  border-radius: 15px;
-  cursor: pointer;
-  max-height: 350px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-}
-.first-content {
-  height: 100%;
-  width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: space-around;
-  opacity: 1;
-  border-radius: 15px;
-  border-color: white;
-  font-size: 15px;
-}
-
-.content-t-m:hover .first-content {
-  height: 0px;
-  opacity: 0;
-}
-
-.second-content {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  font-size: 0px;
-  transform: rotate(90deg) scale(-1);
-  border-color: white;
-}
-
-.content-t-m:hover .second-content {
-  opacity: 1;
-  height: 80%;
-  font-size: 0.8rem;
-  transform: rotate(0deg);
-}
-
-.third-content {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 7px;
-  transition: all 0.4s;
-  font-size: 0px;
-  transform: rotate(90deg) scale(-1);
-}
-.content-t-m:hover .third-content {
-  opacity: 1;
-  height: 40px;
-  width: 100px;
-  font-size: 0.7rem;
-  transform: rotate(0deg);
-}
-
-.ticker {
-  position: absolute; /* Position absolute for vertical movement */
-  animation: ticker-animation 10s linear infinite; /* Adjust animation duration as needed */
-  background-color: #000;
-  color: white;
-}
-
-@keyframes ticker-animation {
-  0% {
-    transform: translateY(100%); /* Start off-screen at the bottom */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  100% {
-    transform: translateY(-100%); /* Move the content upward */
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(117deg, #0C1D39 14.64%, #1D0C32 89.29%);
+    color: #93b2fb;
   }
-}
-.ticker p {
-  margin: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc; /* Add a border for separation */
-  width: 320px;
-  background-color: #000;
-  color: white;
-}
-
-.cont {
-  border: 1px solid white; /* Border style, width, and color */
-  padding: 5px; /* Add padding to create space inside the border */
-  width: 200px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  margin-left: 10px;
-  margin-top: 10px;
-  background-color: #000;
-  color: white;
-}
-.tripbutton {
-  padding: 0.1em 0.25em;
-  width: 13em;
-  height: 4.2em;
-  background-color: #212121;
-  border: 0.08em solid #93b2fb;
-  border-radius: 0.3em;
-  font-size: 12px;
-}
-
-.tripbutton span {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0.4em;
-  width: 8.25em;
-  height: 2.5em;
-  background-color: #212121;
-  border-radius: 0.2em;
-  font-size: 1.5em;
-  color: #2954b7;
-  border: 0.08em solid #93b2fb;
-  box-shadow: 0 0.4em 0.1em 0.019em #93b2fb;
-}
-
-.tripbutton span:hover {
-  transition: all 0.5s;
-  transform: translate(0, 0.4em);
-  box-shadow: 0 0 0 0 #fff;
-  cursor: pointer;
-}
-
-.tripbutton span:not(hover) {
-  transition: all 1s;
-}
-
-.icon {
-  width: 20px;
-  padding: 1px;
-  margin-top: 10px;
-  height: 17px;
-}
-.icons {
-  width: 30px;
-  padding: 1px;
-  margin-top: 5px;
-  height: 25px;
-  background-color: #000;
-}
-.bb {
-  cursor: pointer;
-}
+  
+  .dash-container {
+    background-size: cover;
+  }
+  
+  .end {
+    z-index: 0;
+  }
+  
+  .vessel {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .top-mid {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 750px;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 9px;
+  }
+  
+  .bottom-mid {
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 150px;
+    height: 50px;
+    border-radius: 9px;
+  }
+  
+  .end-top,
+  .end-bottom {
+    margin-left: -400px;
+    width: 370px;
+    height: 330px;
+    border-radius: 30px;
+    background: rgba(189, 186, 203, 0.26);
+    position: relative;
+    overflow: hidden;
+    color: #a7ccf6;
+    white-space: nowrap;
+  }
+  
+  #notification {
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin: 0;
+  }
+  
+  .name,
+  .namee {
+    z-index: 1;
+    position: relative;
+    font-weight: 120;
+    padding-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    background-color: #46517d;
+  }
+  
+  #Name {
+    margin-top: -10px;
+    padding-top: 15px;
+    height: 60px;
+  }
+  
+  .ticker {
+    position: absolute;
+    animation: ticker-animation 10s linear infinite;
+    border-radius: 30px;
+    color: #a7ccf6;
+  }
+  
+  @keyframes ticker-animation {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .ticker p {
+    margin: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    width: 350px;
+    color: #a7ccf6;
+  }
+  
+  .cont {
+    border: 1px solid #b0d1f6;
+    padding: 5px;
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #a7ccf6;
+  }
+  
+  .icons {
+    width: 30px;
+    padding: 1px;
+    margin-top: 5px;
+    height: 25px;
+  }
+  
+  .top-m {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .username {
+    font-size: 20px;
+  }
+  
+  .bottom-m {
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 800px;
+    height: 400px;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+      rgba(176, 196, 222, 0.20);
+    overflow-x: scroll;
+  }
+  
+  .detail-cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .detail-cards {
+    width: 450px;
+    text-align: center;
+    height: 400px;
+    margin-left: 30px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid rgba(232, 226, 226, 0.70);
+    background: linear-gradient(180deg, rgba(205, 184, 184, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
+    color: #a7ccf6;
+  }
+  
+  .tripbutton {
+    background-color: #808080;
+    margin-left: 550px;
+    border: none;
+    width: fit-content;
+  }
+  
+  .tripbutton:hover {
+    background-color: #93b2fb;
+  }
+  
+  .button-detail {
+    background-color: #808080;
+    border: none;
+  }
+  
+  .arrow-button {
+    margin-top: -200px;
+    margin-left: 330px;
+    background-color: #808080;
+    border: none;
+    padding: 0;
+    width: 190px;
+    height: 20px;
+  }
+  

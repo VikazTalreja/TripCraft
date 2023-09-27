@@ -4,11 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Homepage from "./components/Homepage/Homepage";
 import Login from "./components/Login/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
 import Itinerary from "./components/Itinerary/Itinerary";
+import DB from "./components/NewDB/DB";
 
 import "./index.css";
-import Chatbot from "./components/Chatbot/Chatbot";
 
 const router = createBrowserRouter([
   {
@@ -20,22 +19,21 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/user/Muskan",
-    element: <Dashboard />,
+    path: "/dashboard",
+    element: <DB />,
   },
   {
     path: "/user/Muskan/trips/1",
     element: <Itinerary />,
   },
-  {
-    path: "/chatbot",
-    element: <Chatbot />,
-  },
+  // {
+  //   path: "/db",
+  //   element: <Dashboard />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    <Chatbot />
   </React.StrictMode>
 );

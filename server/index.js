@@ -1,46 +1,29 @@
-const { OpenAI } = require("openai");
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
-const PORT = 8000;
-
-require("dotenv").config();
+import { connectDB } from "./database/database.js";
+import userRouter from "./routes/auth.js";
+import tripRouter from "./routes/trips.js";
 
 const app = express();
-
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true }));
+const PORT = 8080;
+dotenv.config();
 
 app.set(PORT);
+app.use(cors());
+app.use(cookieParser());
+connectDB();
 
-app.get("/", (req, res) => {
-  return res.json({ success: "running" });
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/harsh", (req, res) => {
-  console.log(req.body);
-  return res.status(200, "working");
-});
+app.use("/auth", userRouter);
+app.use("/dashboard", tripRouter);
 
-app.post("/chatbot", async (req, res) => {
-  // console.log(req);
-  const { message } = req.body;
-  console.log(message);
-
-  const openai = new OpenAI({
-    apiKey: process.env.API_KEY,
-  });
-
-  const response = await openai.completions.create({
-    model: "text-davinci-003",
-    prompt: req.body.message,
-    max_tokens: 2048,
-    temperature: 1,
-  });
-
-  return res.json(response.choices[0].text);
+app.use("/", (req, res) => {
+  res.send("works");
 });
 
 app.listen(PORT, () => {

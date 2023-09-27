@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import "./CardWrapper.scss";
+import "./CardWrapper.CardWrapper.scss";
 import Tilt from "react-parallax-tilt";
 import data from "../../data/data.json";
 
