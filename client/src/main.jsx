@@ -8,6 +8,8 @@ import Itinerary from "./components/Itinerary/Itinerary";
 import DB from "./components/NewDB/DB";
 
 import "./index.css";
+import Form from "./components/Form/Form";
+import ChatBot from "./components/Chatbot/ChatBot";
 
 const router = createBrowserRouter([
   {
@@ -26,14 +28,15 @@ const router = createBrowserRouter([
     path: "/user/Muskan/trips/1",
     element: <Itinerary />,
   },
-  // {
-  //   path: "/db",
-  //   element: <Dashboard />,
-  // },
+  {
+    path: "/form",
+    element: <Form />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ChatBot />
   </React.StrictMode>
 );

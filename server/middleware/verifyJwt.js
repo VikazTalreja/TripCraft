@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 
 export const jwtVerify = (req, res, next) => {
   const token = req.headers["x-access-token"]?.split(" ")[1];
+  console.log(token);
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
       if (err) {

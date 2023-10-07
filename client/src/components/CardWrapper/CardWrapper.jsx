@@ -3,29 +3,16 @@ import { useState, useEffect, useRef } from "react";
 import "./CardWrapper.CardWrapper.scss";
 import Tilt from "react-parallax-tilt";
 import data from "../../data/data.json";
+import dummyData from "../../data/dummyData.json";
 
 const CardWrapper = () => {
-  // useEffect(() => {
-  //   const scrollToTopButton = document.querySelector(".scroll-icon");
-  //   const scrollableDiv = document.querySelector(".ItineraryLists"); // Replace with the appropriate class or ID of your div
-
-  //   scrollToTopButton.addEventListener("click", () => {
-  //     console.log("Hello");
-  //     scrollableDiv.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   });
-  // }, []);
+  console.log(dummyData);
   return (
     <div className="CardWrapper">
+      <h1>{dummyData.city}</h1>
       <div className="wrapper">
-        <div className="center-line">
-          {/* <button className="scroll-icon">
-            <i className="start fas fa-caret-up"></i>
-          </button> */}
-        </div>
-        {data.days.map((item, index) => (
+        <div className="center-line"></div>
+        {dummyData.days.map((item, index) => (
           <Card position={index + 1} detail={item} key={index} />
         ))}
       </div>
@@ -88,8 +75,8 @@ const Card = ({ detail, position }) => {
         <section>
           <i className="icon fa-solid fa-location-dot"></i>
           <h1>Day {detail.day}</h1>
-          {detail.activities.map((item, index) => (
-            <li key={index}>{item[0]}</li>
+          {detail.places.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </section>
       </div>

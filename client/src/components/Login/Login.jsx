@@ -82,7 +82,7 @@ const Login = () => {
                 {...signUpHook.register("name")}
                 type="text"
                 placeholder="Enter your name"
-                name="username"
+                name="name"
               />
               <input
                 {...signUpHook.register("email")}

@@ -22,24 +22,19 @@ export const singIn = (req, res) => {
             name: userDB.name,
             email: userDB.email,
           };
-          jwt.sign(
-            payload,
-            process.env.JWT_SECRET,
-            { expiresIn: 7776000 },
-            (err, token) => {
-              if (err) {
-                return res.status(404).json({ message: err });
-              }
-              res.cookie("jwtToken", token, {
-                httpOnly: true,
-                secure: true,
-              });
-              return res.status(200).json({
-                message: "success",
-                token: "Bearer " + token,
-              });
+          jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
+            if (err) {
+              return res.status(404).json({ message: err });
             }
-          );
+            res.cookie("jwtToken", token, {
+              httpOnly: true,
+              secure: true,
+            });
+            return res.status(200).json({
+              message: "success",
+              token: "Bearer " + token,
+            });
+          });
         } else {
           return res.status(404).json({ message: "invalid password" });
         }

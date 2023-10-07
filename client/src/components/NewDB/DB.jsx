@@ -1,22 +1,46 @@
 import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 import tripData from "./dummyData.json";
 import "./db.css";
 
 const DB = () => {
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    console.log(token);
-    const finalToken = token.replace("Bearer ", "");
-    console.log(finalToken);
-    const info = jwt_decode(finalToken);
-    console.log(info);
-    const temp = info.name.split(" ");
-    setUser(temp[0]);
-  }, []);
-
   const [user, setUser] = useState("null");
+  const [info, setInfo] = useState({});
+  const [cardData, setCardData] = useState([]);
+
+  try {
+    useEffect(() => {
+      const newToken = localStorage.getItem("token");
+      const finalToken = newToken.replace("Bearer ", "");
+      const info = jwt_decode(finalToken);
+      const temp = info.name.split(" ");
+      setInfo(info);
+      setUser(temp[0]);
+      getCardData();
+    }, []);
+  } catch (err) {
+    console.log(err);
+  }
+
+  const getCardData = () => {
+    const token = localStorage.getItem("token");
+    axios
+      .get("http://localhost:8080/dashboard/", {
+        headers: {
+          "x-access-token": token,
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        setCardData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="main-container">
@@ -27,7 +51,9 @@ const DB = () => {
             <p>Where to, next?</p>
           </div>
           <div className="plan-button">
-            <button className="plan-btn">Plan your voyage!</button>
+            <Link to="/form">
+              <button className="plan-btn">Plan your voyage!</button>
+            </Link>
           </div>
         </div>
         <div className="archive-div">
@@ -51,15 +77,20 @@ const DB = () => {
                   <button className="details-btn">Details</button>
                 </div>
               </div> */}
-              {tripData.map((data, index) => (
-                <div className="trip-card">
+              {/* {cardData.map((data, idx) => {
+                console.log(data);
+                console.log(idx);
+              })} */}
+              {cardData.map((data, index) => (
+                <div className="trip-card" key={index}>
                   <div className="city">
-                    <p>{data.cityName}</p>
+                    {console.log(data)}
+                    <p>{data.city}</p>
                   </div>
                   <div className="line"></div>
                   <div className="trip-details">
                     <div className="start-date">
-                      <span>Start Date: </span> {data.startDate}
+                      <span>Start Date: </span> {data.date}
                     </div>
                     <div className="duration">
                       <span>Duration: </span> {data.duration}
