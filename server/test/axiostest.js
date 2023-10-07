@@ -2,9 +2,9 @@ import axios from "axios";
 import TripData from "../models/TripData.js";
 import { MongoClient } from "mongodb";
 
-import { connectDB } from "../database/database.js";
+// import { connectDB } from "../database/database.js";
 
-await connectDB();
+// const client = await connectDB();
 
 const getDetails = async () => {
   const response = await axios.get(
@@ -42,9 +42,11 @@ console.log(newTrip.places);
 //     console.log(e);
 //   });
 
-const client = new MongoClient();
+const client = new MongoClient("mongodb://localhost:27017/mpr");
 
-client.connect("mongodb://127.0.0.1:27017/mpr");
+await client.connect();
+
+console.log("connected");
 
 const db = client.db("mpr");
 const coll = db.collection("tripdata");

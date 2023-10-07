@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 
 import "./ChatBot.css";
 import send from "../../assets/send.png";
+import msg from "../../assets/icon.png";
 
 const ChatBot = () => {
+  useEffect(() => {
+    const open = document.getElementById("open-button");
+    const window = document.getElementById("chatbot-window");
+    const close = document.getElementById("close-button");
+
+    open.addEventListener("click", () => {
+      window.classList.remove("display-none");
+      open.classList.add("display-none");
+    });
+
+    close.addEventListener("click", () => {
+      window.classList.add("display-none");
+      open.classList.remove("display-none");
+    });
+  }, []);
+
   const submitHandle = async (e) => {
     e.preventDefault();
 
@@ -39,8 +56,11 @@ const ChatBot = () => {
 
   return (
     <div className="chatbot-container">
-      <div className="chatbot-window">
-        <div className="cb-heading">OpenAI Chatbot</div>
+      <div className="chatbot-window display-none" id="chatbot-window">
+        <div className="cb-heading">
+          <span>OpenAI Chatbot</span>
+          <i class="fa-solid fa-chevron-down" id="close-button"></i>
+        </div>
         <div className="chat-window" id="chat-window"></div>
         <div className="chat-input">
           <form onSubmit={submitHandle} id="chatbot-form">
@@ -49,6 +69,11 @@ const ChatBot = () => {
               <img src={send} alt="" width={20} height={20} />
             </div>
           </form>
+        </div>
+      </div>
+      <div className="button-wrapper" id="open-button">
+        <div className="open-button">
+          <img src={msg} width={30} height={30} />
         </div>
       </div>
     </div>

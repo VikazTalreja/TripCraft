@@ -24,12 +24,26 @@ body {
 .cb-heading {
   background-color: #00a67e;
   color: white;
-  text-align: center;
-  font-weight: 500;
-  font-size: 17px;
   padding: 15px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cb-heading span {
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+#close-button {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  /* bottom: 0; */
 }
 
 .chat-window {
@@ -100,4 +114,30 @@ body {
   margin-left: 10px;
   border-radius: 5px;
   float: left;
+}
+
+.display-none {
+  visibility: hidden;
+}
+
+.chatbutton-container {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.open-button {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  height: 70px;
+  width: 70px;
+  background-color: #00a67e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
