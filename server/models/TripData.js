@@ -4,8 +4,8 @@ const placesData = new mongoose.Schema({
   day: {
     type: Number,
   },
-  places: {
-    type: Array,
+  activities: {
+    type: [String],
   },
 });
 

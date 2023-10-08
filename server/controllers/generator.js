@@ -9,19 +9,19 @@ export const generator = async (req, res) => {
     apiKey: process.env.OPENAI_API,
   });
 
-  const format = `Generate a ${duration}-day trip itinerary for ${city} in JSON format. The JSON should have the following structure:
+  const format = `Generate a ${duration}-day trip itinerary for ${city} in JSON format. STRICTLY DONT RETURN ANYTHING ELSE APART FROM THE REQUIRED JSON FILE. NO EXTRA TEXT. The JSON should have the following structure:
 
   {
     "places": [
       {
         "day": 1,
         "activities": [
-          ["Arrival and Check-in", [latitude & longitude of place]],
-          ["Gateway of India", [latitude & longitude of place]],
-          ["Elephanta Caves", [latitude & longitude of place]]
+          "Arrival and Check-in",
+          "Gateway of India",
+          "Elephanta Caves"
         ]
       },    
-      // Add more days as per user request with activities and coordinates here.
+      // Add more days as per user request with activities here.
     ]
   }`;
 
@@ -45,6 +45,10 @@ export const generator = async (req, res) => {
 
   parsedJSON.user_id = uid;
   parsedJSON.city = city;
+
+  console.log(parsedJSON);
+
+  console.log(parsedJSON.places[0].activities);
 
   const newData = new TripData(parsedJSON);
 
