@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import tripData from "./dummyData.json";
 import "./db.css";
