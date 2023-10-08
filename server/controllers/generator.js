@@ -16,9 +16,9 @@ export const generator = async (req, res) => {
       {
         "day": 1,
         "activities": [
-          "Arrival and Check-in",
-          "Gateway of India",
-          "Elephanta Caves"
+          "[Arrival and Check-in",[latitude of place, longitude of place]],
+          "[Gateway of India",[latitude of place, longitude of place]],
+          "[Elephanta Caves",[latitude of place, longitude of place]]
         ]
       },    
       // Add more days as per user request with activities here.

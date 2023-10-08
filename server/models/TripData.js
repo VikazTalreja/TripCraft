@@ -5,7 +5,7 @@ const placesData = new mongoose.Schema({
     type: Number,
   },
   activities: {
-    type: [String],
+    type: [[Array]],
   },
 });
 
