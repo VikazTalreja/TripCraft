@@ -13,9 +13,6 @@ const tripData = new mongoose.Schema({
   user_id: {
     type: mongoose.Schema.Types.ObjectId,
   },
-  trip_id: {
-    type: mongoose.Schema.Types.ObjectId,
-  },
   city: {
     type: String,
     required: true,

@@ -8,6 +8,9 @@ import userRouter from "./routes/auth.js";
 import tripGetRouter from "./routes/tripGet.js";
 import tripPostRouter from "./routes/tripPost.js";
 import chatbotRouter from "./routes/chatbot.js";
+import itineraryRouter from "./routes/itinerary.js";
+
+import { test } from "./test/test.js";
 
 const app = express();
 const PORT = 8080;
@@ -25,6 +28,9 @@ app.use("/auth", userRouter);
 app.use("/dashboard", tripGetRouter);
 app.use("/trip", tripPostRouter);
 app.use("/chatbot", chatbotRouter);
+app.use("/itinerary", itineraryRouter);
+
+app.post("/test", test);
 
 app.use("/", (req, res) => {
   res.send("works");

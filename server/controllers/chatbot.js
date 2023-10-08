@@ -9,9 +9,15 @@ export const chatbot = async (req, res) => {
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-16k",
-    max_tokens: 4096,
     temperature: 1,
-    messages: [{ role: "user", content: prompt }],
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are a chatbot that helps people by giving best places to travel and itineraries",
+      },
+      { role: "user", content: prompt },
+    ],
   });
 
   return res.json(response);

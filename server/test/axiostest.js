@@ -42,13 +42,15 @@ console.log(newTrip.places);
 //     console.log(e);
 //   });
 
-const client = new MongoClient("mongodb://localhost:27017/mpr");
+// const client = new MongoClient("mongodb://localhost:27017/mpr");
 
-await client.connect();
+// await client.connect();
 
-console.log("connected");
+// console.log("connected");
 
-const db = client.db("mpr");
-const coll = db.collection("tripdata");
+// const db = client.db("mpr");
+// const coll = db.collection("tripdata");
 
-coll.insertOne(newTrip);
+// coll.insertOne(newTrip);
+
+await newTrip.save();

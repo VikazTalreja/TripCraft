@@ -45,6 +45,15 @@ const Form = () => {
         console.log(err);
       });
 
+    await axios
+      .post("http://localhost:8080/itinerary/generate", data)
+      .then((e) => {
+        console.log(e);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
     window.location.href = "http://localhost:5173/dashboard";
   };
 

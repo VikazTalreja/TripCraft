@@ -93,6 +93,11 @@ body {
   cursor: pointer;
 }
 
+.user-message-wrapper {
+  width: 450px;
+  height: max-content;
+}
+
 .user-message {
   background-color: #007bff;
   color: #fff;
@@ -101,6 +106,7 @@ body {
   margin-right: 10px;
   border-radius: 5px;
   float: right;
+  clear: both;
   max-width: 300px;
   width: auto;
 }
@@ -114,6 +120,8 @@ body {
   margin-left: 10px;
   border-radius: 5px;
   float: left;
+  clear: both;
+  animation: slide-in 0.5s;
 }
 
 .display-none {
@@ -140,4 +148,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.open-button img {
+  filter: invert(1);
+}
+
+#close-button {
+  cursor: pointer;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
