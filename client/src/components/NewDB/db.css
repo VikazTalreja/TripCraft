@@ -45,6 +45,24 @@
   font-size: 1rem;
   color: white;
   font-weight: 500;
+  display: flex;
+}
+
+.logout-btn {
+  outline: none;
+  border: none;
+  background-color: rgba(176, 196, 222, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+  display: flex;
+}
+
+.logout-btn img {
+  filter: invert(1);
+  margin-right: 3px;
 }
 
 .plan-button button {

@@ -10,7 +10,7 @@ const CardWrapper = () => {
   return (
     <div className="CardWrapper">
       {console.log(data)}
-      <h1>{data.city}</h1>
+      <h1 className="city-name">{data.city}</h1>
       <div className="wrapper">
         <div className="center-line"></div>
         {data.places.map((item, index) => (
@@ -99,7 +99,7 @@ const Card = ({ position, info }) => {
           <h1>Day {info.day}</h1>
           <ul>
             {info.activities.map((activity, index) => (
-              <li key={index}>{activity[0][0]}</li>
+              <li key={index}>• {activity[0][0]}</li>
             ))}
           </ul>
         </section>

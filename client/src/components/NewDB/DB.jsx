@@ -3,6 +3,7 @@ import jwt_decode from "jwt-decode";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import logout from "../../assets/logout.png";
 import "./db.css";
 
 const DB = () => {
@@ -59,6 +60,21 @@ const DB = () => {
           <div className="greet">
             <h1>Hello {user}</h1>
             <p>Where to, next?</p>
+          </div>
+          <div className="logout-btn-div">
+            <Link to="/login">
+              <button
+                className="logout-btn"
+                onClick={() => {
+                  localStorage.removeItem("user_id");
+                  localStorage.removeItem("token");
+                  localStorage.removeItem("city");
+                }}
+              >
+                <img src={logout} width={20} height={20} />
+                <span>Log Out</span>
+              </button>
+            </Link>
           </div>
           <div className="plan-button">
             <Link to="/form">

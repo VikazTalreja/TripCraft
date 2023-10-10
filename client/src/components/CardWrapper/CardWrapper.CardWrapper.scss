@@ -5,6 +5,13 @@
   width: 80%;
   margin: 0 auto;
   border-radius: 10px;
+  .city-name{
+    text-align: center;
+    margin-top: 1.4rem;
+    border-radius: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+  }
 }
 
 .wrapper {
@@ -93,16 +100,17 @@
   h1 {
     font-family: "Bebas Neue", cursive;
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
     color: #ff1354;
   }
   li {
     font-family: "Poppins", sans-serif;
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1.16rem;
+    list-style: none;
+    text-align: center;
   }
 }
-
 .Card-1 {
   transform: translateX(-100%);
 }

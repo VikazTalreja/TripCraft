@@ -63,7 +63,7 @@ const ChatBot = () => {
         </div>
         <div className="chat-window" id="chat-window"></div>
         <div className="chat-input">
-          <form onSubmit={submitHandle} id="chatbot-form">
+          <form autoComplete="false" onSubmit={submitHandle} id="chatbot-form">
             <input placeholder="enter query" id="user-input" type="text" />
             <div className="icon-box" onClick={submitHandle}>
               <img src={send} alt="" width={20} height={20} />
