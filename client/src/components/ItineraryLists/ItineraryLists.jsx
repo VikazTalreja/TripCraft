@@ -9,7 +9,7 @@ const ItineraryLists = () => {
   return (
     <div className="ItineraryLists">
       <div className="header">
-        <Link to="/user/Muskan">
+        <Link to="/itinerary">
           <button onClick={() => console.log("Hello")}>
             <i className="fa-solid fa-arrow-left"></i>
           </button>

@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element: <DB />,
   },
   {
-    path: "/user/Muskan/trips/1",
+    path: "/itinerary",
     element: <Itinerary />,
   },
   {

@@ -8,7 +8,9 @@ const style = {
   height: "100%",
   width: "100%",
 };
-const TravelMap = ({ data }) => {
+const TravelMap = () => {
+  const jsonString = sessionStorage.getItem("response");
+  const data = JSON.parse(jsonString);
   const mapRef = useRef(null); // Ref to store the map instance
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const TravelMap = ({ data }) => {
     }
 
     // Loop through data to add markers and popups
-    data.forEach((day) => {
+    data.places.forEach((day) => {
       day.activities.forEach((activity) => {
         const [location, coordinates] = activity;
         L.marker(coordinates)
@@ -45,12 +47,14 @@ const TravelMap = ({ data }) => {
           .openPopup();
       });
     });
+    console.log("it works");
   }, [data]);
 
   return (
     <div className="Map">
       <div id="leaflet-map" style={style} />
     </div>
+    // <h1>works</h1>
   );
 };
 

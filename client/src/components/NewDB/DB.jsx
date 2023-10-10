@@ -3,7 +3,6 @@ import jwt_decode from "jwt-decode";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import tripData from "./dummyData.json";
 import "./db.css";
 
 const DB = () => {
@@ -18,6 +17,8 @@ const DB = () => {
       const info = jwt_decode(finalToken);
       const temp = info.name.split(" ");
       setInfo(info);
+      console.log(info);
+      localStorage.setItem("user_id", info.id);
       setUser(temp[0]);
       getCardData();
     }, []);
@@ -41,6 +42,15 @@ const DB = () => {
         console.log(err);
       });
   };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const deatilsButton = document.getElementsByClassName("details-btn");
+    deatilsButton.addEventListener("click", () => {
+      console.log("entered here");
+      const cityElement = deatilsButton.closest("city");
+      console.log(cityElement.textContent);
+    });
+  });
 
   return (
     <div className="main-container">
@@ -81,7 +91,7 @@ const DB = () => {
                 console.log(data);
                 console.log(idx);
               })} */}
-              {cardData.map((data, index) => (
+              {cardData.reverse().map((data, index) => (
                 <div className="trip-card" key={index}>
                   <div className="city">
                     {console.log(data)}
@@ -89,13 +99,25 @@ const DB = () => {
                   </div>
                   <div className="line"></div>
                   <div className="trip-details">
+                    <div>{console.log(index)}</div>
                     <div className="start-date">
                       <span>Start Date: </span> {data.date}
                     </div>
                     <div className="duration">
                       <span>Duration: </span> {data.duration}
                     </div>
-                    <button className="details-btn">Details</button>
+                    <button
+                      name={`${data.city}`}
+                      className="details-btn"
+                      onClick={(e) => {
+                        const cityName = e.target.name;
+                        localStorage.setItem("city", cityName);
+                        window.location.href =
+                          "http://localhost:5173/itinerary";
+                      }}
+                    >
+                      Details
+                    </button>
                   </div>
                 </div>
               ))}

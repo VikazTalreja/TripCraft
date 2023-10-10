@@ -9,6 +9,7 @@ import tripGetRouter from "./routes/tripGet.js";
 import tripPostRouter from "./routes/tripPost.js";
 import chatbotRouter from "./routes/chatbot.js";
 import itineraryRouter from "./routes/itinerary.js";
+import getItineraryRouter from "./routes/itineraryGet.js";
 
 import { test } from "./test/test.js";
 
@@ -29,6 +30,7 @@ app.use("/dashboard", tripGetRouter);
 app.use("/trip", tripPostRouter);
 app.use("/chatbot", chatbotRouter);
 app.use("/itinerary", itineraryRouter);
+app.use("/itinerary", getItineraryRouter);
 
 app.post("/test", test);
 
