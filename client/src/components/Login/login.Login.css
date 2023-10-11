@@ -228,3 +228,8 @@ p {
   color: red;
   margin-top: 20px;
 }
+
+.success-div {
+  color: greenyellow;
+  margin-top: 20px;
+}

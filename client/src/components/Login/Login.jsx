@@ -11,6 +11,7 @@ const Login = () => {
   const signInHook = useForm();
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const onSignUpSubmit = (d) => {
     // console.log(JSON.stringify(d));
@@ -22,6 +23,7 @@ const Login = () => {
         },
       })
       .then((res) => {
+        setSuccess("signed up successfully, please sign in...");
         console.log(res);
       });
   };
@@ -95,6 +97,7 @@ const Login = () => {
                 placeholder="Enter password"
                 name="password"
               />
+              <div className="success-div">{success}</div>
               <button className="sign-button">Sign Up!</button>
             </form>
           </div>

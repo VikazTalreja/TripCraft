@@ -20,5 +20,7 @@ export const chatbot = async (req, res) => {
     ],
   });
 
+  // console.log(response.data.choices[0].message.content);
+
   return res.json(response);
 };
