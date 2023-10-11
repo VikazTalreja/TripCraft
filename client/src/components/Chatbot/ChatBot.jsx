@@ -44,9 +44,10 @@ const ChatBot = () => {
           messages: prompt,
         }
       );
-      const answer = response.data.choices[0].message.content;
+      const answer = response.data;
+      const formattedAnswer = answer.replace(/\n/g, "<br>");
       console.log(answer);
-      reply.innerHTML = answer;
+      reply.innerHTML = formattedAnswer;
     } catch (err) {
       console.log(err);
     }
