@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-
-import "./login.Login.css";
-
+import { animateElements } from "./Animation.js";
+import Signup_video from "../../assets/SignupBg.mp4";
+import "./login.css";
+import Login_Video from "../../assets/LoginBg.mp4";
 import globe from "../../assets/logo.png";
-
 const Login = () => {
   const signUpHook = useForm();
   const signInHook = useForm();
-
+  const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [currentVideo, setCurrentVideo] = useState(Login_Video);
 
   const onSignUpSubmit = (d) => {
-    // console.log(JSON.stringify(d));
     console.log(d);
     axios
       .post("http://localhost:8080/auth/signup", d, {
@@ -66,21 +66,31 @@ const Login = () => {
     const signUpButton = document.getElementById("signUp");
     const main = document.getElementById("main");
 
+    const videoElement = document.querySelector(".Login_Video");
+    videoElement.addEventListener("loadeddata", () => {
+      setLoaded(true);
+    });
+
+    if (loaded) {
+      animateElements();
+    }
+
     signUpButton.addEventListener("click", () => {
       main.classList.add("right-panel-active");
+      setCurrentVideo(Signup_video);
     });
 
     signInButton.addEventListener("click", () => {
       main.classList.remove("right-panel-active");
+      setCurrentVideo(Login_Video);
     });
-  }, []);
+  }, [loaded]);
 
   return (
     <div className="log-container">
       <div className="login-div">
         <div className="tagline">
-          <img src={globe} width={60} height={60}></img>
-          <header>TripCraft!</header>
+          <header>🌍Tripcraft</header>
         </div>
         <div className="container" id="main">
           <div className="sign-up-div">
@@ -125,9 +135,6 @@ const Login = () => {
               />
               <div className="error-div">{error}</div>
               <button className="sign-button">Sign In!</button>
-              {/* <Link to="/dashboard">
-                <button className="sign-button">Sign In!</button>
-              </Link> */}
               <span>
                 Forgot your password?<a href="#">Click here</a>
               </span>
@@ -153,6 +160,11 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <video autoPlay loop muted className="Login_Video">
+        <source src={currentVideo} type="video/mp4" />{" "}
+        {/* Use currentVideo state */}
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };
