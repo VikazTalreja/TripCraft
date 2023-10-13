@@ -1,14 +1,18 @@
 import React, { useEffect, useRef } from "react";
-import "./Homepage.Homepage.css";
+import "./Homepage.css";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 import Bgvideo from "../../assets/Homebg.mp4";
+import NewVideo from "../../assets/Homebg2.mp4"; // The new video
 
 function Homepage() {
   const videoRef = useRef(null);
   const textRef = useRef(null);
   const socialIconsRef = useRef(null);
+  const newVideoRef = useRef(null);
+
+  const [showNewVideo, setShowNewVideo] = React.useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -27,10 +31,10 @@ function Homepage() {
       opacity: 1,
       filter: "blur(0)",
       onComplete: () => {
-        video.pause(); // Pause the video at the last frame
-        video.style.pointerEvents = "none"; // Disable clicks on the video
-        tl.to(homepagetext, { duration: 1, opacity: 1 }); // Fade in text
-        tl.to(socialicons, { duration: 1, opacity: 1 }); // Fade in social icons
+        video.pause();
+        video.style.pointerEvents = "none";
+        tl.to(homepagetext, { duration: 1, opacity: 1 });
+        tl.to(socialicons, { duration: 1, opacity: 1 });
       },
     });
 
@@ -40,24 +44,50 @@ function Homepage() {
   const handleExploreClick = () => {
     const exploreTimeline = gsap.timeline();
 
-    // Add animations to hide text and social icons
     exploreTimeline.to(textRef.current, { duration: 1, opacity: 0 });
     exploreTimeline.to(
       socialIconsRef.current,
       { duration: 1, opacity: 0 },
       "-=1"
     );
+
+    const newTimeline = gsap.timeline();
+
+    const video = videoRef.current;
+    newTimeline.to(video, { duration: 1, opacity: 0 });
+
+    const newVideo = newVideoRef.current;
+    newTimeline.to(newVideo, { duration: 1, opacity: 1 });
+    newTimeline.call(() => {
+      newVideo.play();
+
+      gsap.to(newVideo, { duration: 0.2, opacity: 0 });
+
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 0);
+    });
+
+    setShowNewVideo(true);
   };
 
   return (
     <div className="homepage">
       <section className="showcase">
         <header>
-          <h2 className="logo">🌍TripCraft</h2>
+          <h2 className="logo">🌍Tripcraft</h2>
         </header>
         <video
           ref={videoRef}
           src={Bgvideo}
+          autoPlay
+          muted
+          className="video-bg"
+        />
+        <video
+          ref={newVideoRef}
+          src={NewVideo}
+          style={{ display: showNewVideo ? "block" : "none" }}
           autoPlay
           muted
           className="video-bg"
@@ -71,9 +101,9 @@ function Homepage() {
             or an adrenaline-pumping adventure, Trip Craft has you covered.
             Let's start crafting your next adventure today!
           </p>
-          <Link to="/login" onClick={handleExploreClick}>
+          <button className="Explore_button" onClick={handleExploreClick}>
             Explore
-          </Link>
+          </button>
         </div>
         <ul ref={socialIconsRef} className="social">
           <li>
