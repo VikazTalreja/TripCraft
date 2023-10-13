@@ -25,6 +25,13 @@ const Login = () => {
       .then((res) => {
         setSuccess("signed up successfully, please sign in...");
         console.log(res);
+      })
+      .catch((error) => {
+        if (error.response) {
+          if (error.response.status === 409) {
+            setSuccess("user exists");
+          }
+        }
       });
   };
 
