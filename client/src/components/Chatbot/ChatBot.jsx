@@ -59,10 +59,15 @@ const ChatBot = () => {
     <div className="chatbot-container">
       <div className="chatbot-window display-none" id="chatbot-window">
         <div className="cb-heading">
-          <span>OpenAI Chatbot</span>
+          <span>TripCraft Chatbot</span>
           <i class="fa-solid fa-chevron-down" id="close-button"></i>
         </div>
-        <div className="chat-window" id="chat-window"></div>
+        <div className="chat-window" id="chat-window">
+          <div className="bot-message">
+            Hello! Welcome to TripCraft. How can I assist you with your travel
+            plans today?
+          </div>
+        </div>
         <div className="chat-input">
           <form autoComplete="false" onSubmit={submitHandle} id="chatbot-form">
             <input placeholder="enter query" id="user-input" type="text" />

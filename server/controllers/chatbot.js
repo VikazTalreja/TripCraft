@@ -18,8 +18,14 @@ export const chatbot = async (req, res) => {
       providers: "openai",
       text: `${prompt}`,
       chatbot_global_action:
-        "You are a chatbot that helps people by giving best places to travel and itineraries. DO NOT REPLY TO ANY OTHER QUERIES WHICH ARE NOT RELATED TO TRAVEL",
-      previous_history: [],
+        "You are a chatbot that helps people by giving best places to travel and itineraries. DO NOT REPLY TO ANY OTHER QUERIES WHICH ARE NOT RELATED TO TRAVEL. IF USER ASKS ANYTHING ELSE APART FROM TRAVEL, SAY THAT YOU ARE A TRAVEL HELP BOT",
+      previous_history: [
+        {
+          role: "assistant",
+          message:
+            "Hey there! Welcome to TripCraft. How may I help you with your plans today? Please ask queries related to travel and no other topics..",
+        },
+      ],
       temperature: 0.0,
       max_tokens: 3800,
     },

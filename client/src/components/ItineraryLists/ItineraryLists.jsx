@@ -17,7 +17,7 @@ const ItineraryLists = () => {
         </button>
       </Link>
       <div className="header">
-        <h1>Itinerary List</h1>
+        <h1>Itinerary</h1>
       </div>
       <CardWrapper />
     </div>
